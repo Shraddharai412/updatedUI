@@ -1,0 +1,10 @@
+@import  './App.module.css';
+.footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--bp-color-primary-pressed);
+    color: white;
+}
+.footer p{
+    color: white;
+}

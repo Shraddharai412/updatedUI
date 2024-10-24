@@ -1,0 +1,15 @@
+.footer {
+    padding: 1rem ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bp-color-primary-pressed);
+    color: white;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+.footer p{
+    color: white;
+    
+}

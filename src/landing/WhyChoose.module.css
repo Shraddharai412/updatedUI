@@ -1,0 +1,45 @@
+@import  './App.module.css';
+.whyChoose {
+    padding: 2rem;
+    text-align: center;
+    background-color: white;
+}
+
+.boxContainer {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.box {
+    width: 20%;
+    padding: 0.4rem;
+    background-color: var(--bp-color-primary-pressed);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    color: aliceblue;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.box p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.cardInfo{
+    font-size:2rem;
+    color: red;
+}

@@ -1,0 +1,102 @@
+/* Container and Layout */
+.container {
+  margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for container */
+}
+
+/* Header */
+.header {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--bp-color-primary-default); /* Primary color for header */
+  margin-bottom: 20px;
+}
+
+/* Claims Table */
+.claimsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-left: 1%;
+  
+}
+
+.claimsTable th, .claimsTable td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+  border-left: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+  border-top: 1px solid #dee2e6;
+  background-color: white; 
+  border-color: rgb(0, 77, 178);
+}
+
+.claimsTable th {
+  background-color: white; 
+  color: var(--bp-color-primary-hover);
+  font-weight: bold;
+  border: 2px solid rgb(0, 77, 178);
+}
+
+/* Row Styling */
+.claimsTable tr {
+  transition: background-color 0.3s ease;
+}
+
+
+.claimsTable tr td {
+  border-left: 5px solid transparent; 
+  border-left: 1px solid  rgb(0, 77, 178) ;
+  /* Default transparent border */
+}
+
+/* Utility Classes */
+.claimsTable .approved {
+  border-left-color: #28a745; 
+  border: 2px solid #28a745 ;
+  border-left: 1px solid #28a745;/* Green border for approved */
+}
+
+.claimsTable .pending {
+  border-left-color: #ffc107; /* Yellow border for pending */
+}
+
+.claimsTable .rejected {
+  border-left-color: #dc3545; /* Red border for rejected */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .claimsTable th, .claimsTable td {
+      padding: 10px;
+      font-size: 0.9rem; /* Smaller font size for mobile */
+  }
+
+  .header {
+      font-size: 1.5rem;
+  }
+}
+
+/* Interactive Buttons */
+.actionBtn {
+  padding: 10px 15px;
+  background-color: var(--bp-color-primary-default);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.actionBtn:hover {
+  background-color: var(--bp-color-primary-hover);
+}
+
+.actionBtn:active {
+  background-color: var(--bp-color-primary-pressed);
+  transform: scale(0.95); /* Slightly shrink on click */
+}

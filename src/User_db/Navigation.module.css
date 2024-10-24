@@ -1,0 +1,129 @@
+/* Container for the sidebar and main content */
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 250px; 
+  height: 100vh; /* Full viewport height */
+  background-color: white;
+  padding-top: 20px; /* Space at the top */
+  position: fixed; /* Fix it to the left side */
+  top: 0;
+  left: 0;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  transition: all 0.3s ease; /* Smooth transition for any changes */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+/* Flex layout for the nav */
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 120px;
+}
+
+/* Reset default styles for the list */
+.navList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 120px;
+}
+
+/* Each navigation item */
+.navItem {
+  width: 100%; /* Full width for easy clicking */
+  padding: 15px 20px; /* Increase padding for better click area */
+  color: var(--bp-color-primary-pressed); /* Text color */
+  text-align: left; /* Align text to the left */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1rem; /* Adjust font size */
+  font-weight: bold; /* Make it bolder for readability */
+  border-left: 4px solid transparent; /* Invisible border by default */
+  transition: all 0.3s ease; /* Smooth transitions */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect for each item */
+/* Active state effect */
+.navItemActive {
+  background-color: rgb(128, 168, 221); /* Keep background color when active */
+  padding-left: 25px; /* Indentation for active state */
+  border-left: 4px solid rgb(128, 168, 221); /* Active state indicator */
+  color: white;
+}
+
+/* Modify hover to complement active */
+.navItem:hover {
+  background-color: rgb(128, 168, 221); /* Same color on hover */
+  padding-left: 25px; /* Slightly indent on hover */
+  border-left: 4px solid rgb(128, 168, 221); /* Border for indicator */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+ .navItem a:focus {
+  background-color: rgb(128, 168, 221);
+  padding-left: 25px; /* Indentation for active state */
+  border-left: 4px solid rgb(128, 168, 221); /* Active state indicator */
+}
+
+/* Style for links within nav items */
+.navItem a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+  display: block; /* Make entire area clickable */
+  width: 100%; /* Full width clickable */
+  position: relative;
+}
+
+/* Add effect when clicking */
+.navItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background:rgb(128, 168, 221);
+  transition: transform 0.3s ease;
+  transform: scaleY(0); /* Hidden by default */
+  transform-origin: top;
+}
+
+/* Show the effect on hover */
+.navItem:hover::before {
+  transform: scaleY(1); /* Grow from top to bottom */
+  transition: transform 0.3s ease; /* Smooth reveal */
+}
+
+/* Main content styling */
+.mainContent {
+  margin-left: 250px; /* Leave space for the sidebar */
+  padding: 20px; /* Padding for spacing */
+  width: calc(100% - 250px); /* Ensure content fits next to the sidebar */
+}
+
+/* Space between sections */
+.mainContent > div {
+  padding: 20px 0; /* Space between sections */
+}
+.footer {
+  background-color: rgb(0, 46, 107);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  position: fixed; 
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9rem;
+  z-index: -1; 
+}
+.footer p{
+  color:white;
+}

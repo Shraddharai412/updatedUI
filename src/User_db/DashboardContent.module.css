@@ -1,0 +1,47 @@
+.dashboardContent {
+  display: flex;
+  flex-direction: column; /* Arrange elements vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100vh; /* Full viewport height */
+  text-align: center; /* Center text inside */
+  background-color: #f9f9f9; /* Optional: background color */
+  padding: 20px; /* Optional: padding for spacing */
+  background-image: url('/src/User_db/assets/userdash.jpg'); /* Add your background image path here */
+  background-size: cover; /* Ensures the image covers the whole area */
+  height: 670px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  padding: 20px;
+}
+
+.greeting {
+  margin-bottom: 20px; /* Space below the greeting text */
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 15px; /* Space between buttons */
+}
+
+.policyButton {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.policyButton:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.createButton {
+  background-color: #28a745; /* Green color for create button */
+}
+
+.updateButton {
+  background-color:#007bff ; /* Yellow color for update button */
+}
